@@ -1,3 +1,6 @@
+import { Config } from '@jest/types';
+import { EnvironmentContext } from '@jest/environment';
+
 const {
   DetoxCircusEnvironment,
   SpecReporter,
@@ -5,7 +8,7 @@ const {
 } = require("detox/runners/jest-circus");
 
 class CustomDetoxEnvironment extends DetoxCircusEnvironment {
-  constructor(config, context) {
+  constructor(config: Config.ProjectConfig, context?: EnvironmentContext) {
     super(config, context);
 
     // Can be safely removed, if you are content with the default value (=300000ms)

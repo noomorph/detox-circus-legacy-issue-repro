@@ -1,5 +1,5 @@
 module.exports = {
-  testRunner: "jest",
+  testRunner: require('path').join('node_modules/jest', require('jest/package.json').bin.jest),
   runnerConfig: "e2e/config.json",
   behavior: {
     init: {
